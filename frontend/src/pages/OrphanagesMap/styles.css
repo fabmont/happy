@@ -65,3 +65,60 @@
 #page-map aside footer strong {
   font-weight: 800;
 }
+
+#page-map aside footer .theme-switcher-btn {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  background: none;
+  color: #fff;
+  transition: 0.3s ease;
+
+  border: 0;
+  margin-top: 20px;
+}
+
+#page-map aside footer .theme-switcher-btn:hover {
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+#page-map aside footer .theme-switcher-btn:active,
+.theme-switcher-btn:focus {
+  outline: none;
+}
+
+#page-map .map-popup .leaflet-popup-content-wrapper {
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 0 4px lightgray;
+  border-radius: 20px;
+}
+
+#page-map .map-popup .leaflet-popup-content {
+  font-family: Nunito, sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: #0089a5;
+  margin: 8px 12px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#page-map .map-popup .leaflet-popup-content-wrapper .view-orphanage-btn {
+  width: 40px;
+  height: 40px;
+  background: #15c3d6;
+  color: #fff;
+  border-radius: 10px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#page-map .map-popup .leaflet-popup-tip-container {
+  display: none;
+}
