@@ -7,27 +7,11 @@ import "./styles.css";
 import logo from "../../assets/logo.svg";
 import mapIcon from "../../utils/mapIcon";
 import api from "../../services/api";
-
-interface Images {
-  id: number;
-  url: string;
-}
-
-interface Orphanage {
-  id: number;
-  about: string;
-  images: Images[];
-  instructions: string;
-  latitude: number;
-  longitude: number;
-  name: string;
-  open_on_weekends: boolean;
-  opening_hours: string;
-}
+import OrphanageTypes from "../../interfaces/orphanages";
 
 export default function OrphanagesMap() {
   const [darkTheme, setDarkTheme] = useState(false);
-  const [orphanages, setOrphanages] = useState<Orphanage[]>([]);
+  const [orphanages, setOrphanages] = useState<OrphanageTypes[]>([]);
 
   useEffect(() => {
     const fetchOrphanages = async () => {
@@ -84,7 +68,11 @@ export default function OrphanagesMap() {
           }`}
         />
         {orphanages.map((item) => (
-          <Marker position={[item.latitude, item.longitude]} icon={mapIcon}>
+          <Marker
+            key={item.id}
+            position={[item.latitude, item.longitude]}
+            icon={mapIcon}
+          >
             <Popup
               className="map-popup"
               closeButton={false}
