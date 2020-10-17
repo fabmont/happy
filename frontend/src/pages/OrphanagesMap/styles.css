@@ -91,7 +91,7 @@
 
 #page-map .map-popup .leaflet-popup-content-wrapper {
   background: rgba(255, 255, 255, 0.8);
-  box-shadow: 0 0 4px lightgray;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.16);
   border-radius: 20px;
 }
 
