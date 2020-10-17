@@ -49,7 +49,7 @@ export default function Orphanage() {
               return (
                 <button
                   key={image.id}
-                  className="active"
+                  className={highlightImg === index ? 'active' : ''}
                   type="button"
                   onClick={() => setHighlightImg(index)}
                 >
@@ -66,7 +66,7 @@ export default function Orphanage() {
             <div className="map-container">
               <Map
                 center={[orphanage.latitude, orphanage.latitude]}
-                zoom={16}
+                zoom={10}
                 style={{ width: '100%', height: 280 }}
                 dragging={false}
                 touchZoom={false}
